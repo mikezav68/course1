@@ -23,6 +23,7 @@ public class Author {
     }
 
     public boolean equals(Author author) {
+        if (author == null || getClass() != author.getClass()) {return false;}
         if (authorName.equals(author.getAuthorName()) && authorSurname.equals(author.getAuthorSurname())) {
             return true;
         } else { return false; }

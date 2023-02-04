@@ -35,6 +35,7 @@ public class Book {
     }
 
     public boolean equals(Book book) {
+        if (book == null || getClass() != book.getClass()) {return false;}
         if (bookName.equals(book.getBookName()) && bookAuthor.equals(book.getBookAuthor())
                 && bookYear == book.getBookYear()) {
             return true;
